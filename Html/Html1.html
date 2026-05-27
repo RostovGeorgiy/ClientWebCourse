@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>A HTML test page displaying form with travel information.</title>
+
 </head>
+
 <body>
-<form action="" method="get">
+
+<h1>Traveler data</h1>
+
+<form action="" method="post">
     <label>
         Name
-        <input type="text" name="nameInput">
+        <input type="text" name="name">
     </label>
+
     <label>
         Description
         <textarea name="description"></textarea>
     </label>
+
     <label>
         Select country
         <select name="countries" multiple>
@@ -22,9 +30,11 @@
             <option value="3">Belarus</option>
         </select>
     </label>
+
     <br>
+
     <label>
-        Select time in days
+        Time in days
         <select name="daysAmount">
             <option value="1" selected>1</option>
             <option value="2">2</option>
@@ -33,21 +43,29 @@
             <option value="5">5</option>
         </select>
     </label>
+
     <br>
+
     <label>
-        Return trip
         <input type="checkbox" name="checkbox" value="Return trip">
+        Return trip
     </label>
+
     <br>
-    <label>
-        Select gender
-        <input type="radio" value="1" name="genderRadio">Male
-        <input type="radio" value="2" name="genderRadio">Female
-    </label>
+
+    <label>Select gender</label>
+    <label><input type="radio" value="1" name="gender">Male</label>
+    <label><input type="radio" value="2" name="gender">Female</label>
+
     <br>
+
     <button type="submit">Submit data</button>
 </form>
-<hr><br>
-<a href="HTML2.html">Go to page 2</a>
+
+<hr>
+<br>
+
+<a href="Html2.html">Go to page 2</a>
+
 </body>
 </html>
