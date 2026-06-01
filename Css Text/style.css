@@ -1,0 +1,57 @@
+* {
+    max-width: 840px;
+    max-height: 700px;
+    box-sizing: border-box;
+    padding: 25px;
+    margin: 25px auto;
+    overflow: auto;
+    background-color: #FEEED5;
+  }
+
+.margins {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    text-alignment: left;
+    padding-left: 0;
+    padding-top: 5px;
+    padding-bottom: 6px;
+         }
+
+.inline-block {
+    display: inline-block;
+    align-items: baseline;
+    gap: 10px;
+    padding: 0;
+              }
+
+.strike-out {
+    text-decoration: line-through;
+            }
+
+.main-header {
+    font-family: sans-serif;
+    font-weight: 500;
+    color: #6C6555;
+    font-size: 1.75rem;
+             }
+
+.header {
+    color: #4587A1;
+    font-family: sans-serif;
+    font-size: 1rem;
+    margin-top: 5px;
+        }
+
+.course-data {
+    font-family: sans-serif;
+    color: #918473;
+             }
+
+.course-info {
+    font-family: sans-serif;
+    color: #71726D;
+    text-indent: 20px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+             }
