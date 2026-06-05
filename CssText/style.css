@@ -3,7 +3,7 @@
 }
 
 .body {
- max-width: 810px;
+    max-width: 810px;
     max-height: 500px;
     margin: 107px 309px;
 }
@@ -16,7 +16,7 @@
     }
 
 .line-break {
-  display: block;
+    display: block;
 }
 
 .margins {
