@@ -2,58 +2,36 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Html страница с использованием стилей CSS</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="body">
-<div class="content">
-    <div>
-        <h1 class="main-header">КЛИЕНТСКАЯ ВЕБ-РАЗРАБОТКА (HTML, CSS,</h1>
-    </div>
-
-    <div class="main-header-margins">
-        <h1 class="main-header">JAVASCRIPT)</h1>
-    </div>
-
-    <div class="line-break">
-        <h2 class="inline-block header margins">Старт:</h2>
-
-        <div class="inline-block course-data margins">
-            идет набор
-        </div>
-    </div>
-
-    <div class="line-break">
-        <h2 class="inline-block header margins">Цена:</h2>
-
-        <div class="inline-block course-data margins">
-            28000 руб.
+<div class="container">
+    <div class="content">
+        <div>
+            <h1 class="main-header">КЛИЕНТСКАЯ ВЕБ-РАЗРАБОТКА (HTML, CSS, <span>JAVASCRIPT)</span></h1>
         </div>
 
-        <div class="inline-block course-data strike-out margins">
-            30000 руб.
+        <div class="header-block">
+            <strong class="header">Старт:</strong>
+            <span class="course-data"> идет набор</span>
         </div>
 
-        <div class="inline-block course-data margins">
-            (возможна оплата по частям)
+        <div class="header-block">
+            <strong class="header">Цена:</strong> <span class="course-data"> 28000 руб.</span>
+            <span class="course-data strike-out">30000 руб.</span>
+            <span class="course-data">(возможна оплата по частям)</span>
         </div>
-    </div>
 
-    <div class="line-break">
-        <h2 class="inline-block header margins">Цена для студентов:</h2>
-
-        <div class="inline-block course-data margins">
-            21000 руб.
+        <div class="header-block">
+            <strong class="header">Цена для студентов:</strong>
+            <span class="course-data"> 21000 руб.</span>
         </div>
-    </div>
 
-    <div class="line-break">
-        <h2 class="inline-block header margins">Содержание курса:</h2>
-    </div>
-
-    <div class="course-info-container">
-        <p class="course-info margins">
+        <h2 class="header header-block">Содержание курса:</h2>
+        <p class="course-info">
             В курсе веб-разработки мы познакомим вас с клиентской веб-разработкой, которая включает в себя верстку
             - обучение HTML и CSS, и написание кода на JavaScript. На курсе JavaScript будут рассмотрены синтаксис, типы
             данных, работа с DOM и событиями, стандартная библиотека языка.

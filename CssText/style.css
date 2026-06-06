@@ -2,59 +2,49 @@
     box-sizing: border-box;
 }
 
-.body {
-    max-width: 810px;
-    max-height: 500px;
-    margin: 107px 309px;
+.container {
+  max-width: 100%;
+  padding: 107px;
+  margin: 0;
 }
 
 .content {
     background-color: #FEEED5;
+    margin: 0 auto 0;
+    max-width: 760px;
+    width: 747px;
+    max-height: 426px;
     padding: 6px 15px;
-    font-family: helvetica;
-    filter: blur(0.02px);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
-
-.line-break {
-    display: block;
-}
-
-.margins {
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    padding-left: 0;
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-
-.inline-block {
-    background-color: inherit;
-    display: inline-block;
-    align-items: baseline;
-    gap: 10px;
-}
 
 .strike-out {
     text-decoration: line-through;
 }
 
+h1 span::before {
+  content: "\A";
+  white-space: pre;
+}
+
 .main-header {
     font-weight: 500;
     color: #6C6555;
-    font-size: 1.72rem;
-}
-
-.main-header-margins {
-    margin-top: -10px;
-    margin-bottom: 3px;
+    font-size: 1.75rem;
+    line-height: 1.1;
+    padding: 5px 0;
+    margin-top: 0;
+    margin-bottom: 6px;
 }
 
 .header {
-    color: #548396;
+    color: #558DA2;
     font-size: 17px;
-    margin-top: 2px;
-    margin-bottom: 2px;
+}
+
+.header-block {
+    margin-top: 0;
+    margin-bottom: 4px;
 }
 
 .course-data {
@@ -65,14 +55,8 @@
     text-align: justify;
     color: #6E665A;
     text-indent: 15px;
-    font-size: 14.85px;
+    font-size: 15px;
     line-height: 1.45;
-    word-spacing: 2.1px;
-    margin-top: 11px;
-    margin-bottom: 11px;
-}
-
-.course-info-container {
-    margin-top: -8px;
-    margin-bottom: -8px;
+    margin-top: 0;
+    margin-bottom: 9px;
 }
