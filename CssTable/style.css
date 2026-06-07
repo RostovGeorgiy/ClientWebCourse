@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+.content {
+    max-width: 100%;
+    padding: 107px;
+    margin: 0;
+}
+
+.table {
+    margin: 55px auto 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 22px;
+    border: 1px solid;
+    border-color: #CFCFCF;
+    padding: 0 10px;
+    height: 52px;
+    border-collapse: collapse;
+}
+
+.table-header {
+    padding-top: 10px;
+    padding-bottom: 7px;
+    color: white;
+    background-color: #3598DB;
+    height: 47px;
+
+}
+
+.column1 {
+    width: 175px;
+}
+
+.column2 {
+    width: 175px;
+}
+
+.column3 {
+    width: 309px;
+}
+
+.column4 {
+    width: 200px;
+}
+
+.gray {
+    background-color: #EEEEEE;
+}
