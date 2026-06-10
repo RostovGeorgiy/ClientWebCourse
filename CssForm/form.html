@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML форма с использованием стилей CSS.</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-body">
+<form action="" method="post">
+    <h1 class="form-header">Отправить заявку</h1>
+
+    <div class="form-body">
+        <div class="input-block">
+            <label for="username">Ваше имя</label>
+            <input class="input-field" type="text" id="username" name="username" placeholder="Ваше имя *">
+        </div>
+
+        <div class="input-block">
+            <label for="phoneNumber">Ваш номер телефона</label>
+            <input class="input-field" type="text" id="phoneNumber" name="phoneNumber"
+                   placeholder="Ваш номер телефона *">
+        </div>
+
+        <div class="input-block">
+            <label for="email">Ваш email или VK</label>
+            <input class="input-field" type="text" id="email" name="email" placeholder="Ваш email или VK *">
+        </div>
+
+        <div class="input-block">
+            <label for="commentary">Комментарий</label>
+            <textarea class="commentary-textarea" id="commentary" rows="4" cols="20" name="commentary"
+                      placeholder="Комментарий (не обязательно)"></textarea>
+        </div>
+
+        <div class="form-message">
+            Заполните и отправьте форму, и мы перезвоним Вам по указанному номеру
+        </div>
+
+        <div class="submit-wrapper">
+            <input class="submit-button" type="submit" value="Отправить заявку">
+        </div>
+    </div>
+</form>
+</body>
+</html>
