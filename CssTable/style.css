@@ -1,49 +1,52 @@
-* {
-    box-sizing: border-box;
-}
-
-.content {
-    max-width: 100%;
-    padding: 107px;
-    margin: 0;
+@media screen and (max-width: 768px) {
+  .table {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100%;
+  }
 }
 
 .table {
-    margin: 55px auto 0;
-    font-family: "Arial", sans-serif;
-    font-size: 22px;
-    border: 1px solid;
-    border-color: #CFCFCF;
-    padding: 0 10px;
-    height: 52px;
+    margin: 162px auto;
+    font-family: "Calibri", Arial, sans-serif;
+    font-size: 23px;
     border-collapse: collapse;
 }
 
+.table tr {
+    border: 1px solid #CFCFCF;
+}
+
 .table-header {
-    padding-top: 10px;
-    padding-bottom: 7px;
-    color: white;
+    text-align: left;
+    font-weight: 400;
+    border: 1px solid #CFCFCF;
+    padding: 10px 10px 4px;
+    color: #fff;
     background-color: #3598DB;
-    height: 47px;
-
 }
 
-.column1 {
+.table td {
+    border: 1px solid #CFCFCF;
+    padding: 8px 10px;
+}
+
+.first-name {
     width: 175px;
 }
 
-.column2 {
+.last-name {
     width: 175px;
 }
 
-.column3 {
+.job-title {
     width: 309px;
 }
 
-.column4 {
+.twitter {
     width: 200px;
 }
 
-.gray {
-    background-color: #EEEEEE;
+.table tbody tr:nth-of-type(odd) {
+      background-color: #EEE;
 }
