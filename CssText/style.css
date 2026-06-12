@@ -5,10 +5,10 @@
 .container {
     max-width: 100%;
     padding: 107px 30px;
+    background-color: #FEEED5;
 }
 
 .content {
-    background-color: #FEEED5;
     margin: 0 auto;
     max-width: 745px;
     max-height: 426px;
@@ -22,6 +22,7 @@
 
 .main-header {
     font-weight: 500;
+    max-width: 820px;
     color: #6C6555;
     font-size: 1.75rem;
     line-height: 1.1;
