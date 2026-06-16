@@ -2,16 +2,11 @@
     box-sizing: border-box;
 }
 
-.container {
-    max-width: 100%;
-    padding: 107px 30px;
-    background-color: #FEEED5;
-}
 
 .content {
+    background-color: #FEEED5;
     margin: 0 auto;
     max-width: 745px;
-    max-height: 426px;
     padding: 6px 15px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
