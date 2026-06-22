@@ -10,14 +10,12 @@
     font-weight: 500;
     font-size: 29px;
     background-color: #FFF;
-    margin-bottom: 2px;
     padding: 17px 20px 0;
     line-height: 1.4;
 }
 
 .form-body {
-    max-width: 742px;
-    margin: 1px 21px;
+    padding: 3px 20px 5px;
     font-size: 14px;
 }
 
@@ -28,18 +26,15 @@
 }
 
 .input-field {
-    color: gray;
     font-weight: 100;
     background-color: #FFF;
-    padding: 7px 12px;
+    padding: 6px 12px;
     margin: 4px 0;
     border: none;
-    max-width: 720px;
     width: 100%;
 }
 
 .commentary-textarea {
-    color: #666769;
     font-weight: 300;
     background-color: #FFF;
     border: none;
@@ -61,21 +56,20 @@
 }
 
 .submit-button {
-    background-color: #378EB2;
+    background-color: #388DB2;
     color: #FFF;
-    margin: 9px 0;
-    padding: 5px 13px;
+    margin: 10px 1px;
+    padding: 6px 13px;
     font-weight: bold;
     border: none;
+    cursor: pointer;
 }
 
 .submit-button:hover {
     background-color: #378EF0;
-    cursor: pointer;
 }
 
 .input-field::placeholder,
 .commentary-textarea::placeholder {
     color: #888;
-    opacity: 1;
 }
