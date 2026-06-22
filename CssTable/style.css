@@ -1,23 +1,12 @@
-@media screen and (max-width: 768px) {
-  .table {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    width: 100%;
-  }
-}
-
 .table {
-    margin: 162px auto;
-    font-family: "Calibri", Arial, sans-serif;
+    margin: 0 auto;
+    font-family: Calibri, Arial, sans-serif;
     font-size: 23px;
     border-collapse: collapse;
-}
-
-.table tr {
     border: 1px solid #CFCFCF;
 }
 
-.table-header {
+.table th {
     text-align: left;
     font-weight: 400;
     border: 1px solid #CFCFCF;
@@ -47,6 +36,6 @@
     width: 200px;
 }
 
-.table tbody tr:nth-of-type(odd) {
-      background-color: #EEE;
+.table tbody tr:nth-child(odd) {
+    background-color: #EEE;
 }
