@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature converter page</title>
+    <script src="temperatureConversion.js" defer></script>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+    <div class="content">
+        <h1>Temperature converter</h1>
+        <form>
+            <label for="temperature-input-field">
+                Input temperature:
+                <input type="text" id="temperature-input-field" name="temperature-input-field"
+                       placeholder="Your temperature value">
+            </label>
+            <button type="button" class="convert-button">Convert temperature</button>
+            <output name="temperatureFahrenheitOutput" class="temperatureOutput"></output>
+            <output name="temperatureKelvinOutput" class="temperatureOutput"></output>
+            <output name="errorMessageOutput" class="errorOutput"></output>
+        </form>
+    </div>
+</div>
+</body>
+</html>
