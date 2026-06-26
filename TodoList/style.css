@@ -1,0 +1,83 @@
+body {
+    height: 100%;
+    background-color: #F5F5DC;
+}
+
+.page {
+    margin: 0 auto;
+    max-width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.form-list {
+    padding: 30px;
+    border: #000 solid 1px;
+}
+
+ul {
+    list-style-position: inside;
+    padding-left: 20px;
+}
+
+li {
+    padding: 10px;
+}
+
+.error-message {
+    color: #f00;
+    display: none;
+}
+
+.invalid {
+    border: #f00 solid 1px;
+}
+
+.invalid ~ .error-message {
+    display: block;
+}
+
+.create-button {
+    display: block;
+    background-color: #0000FF;
+    color: #FFF;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.create-button:hover {
+    background-color: #378EF0;
+}
+
+.edit-button, .cancel-button {
+    background-color: #6C757D;
+    color: #FFF;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.edit-button:hover, .cancel-button:hover {
+    background-color: #7C8A7D;
+}
+
+.save-button {
+    background-color: #198754;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.save-button:hover {
+    background-color: #19B254;
+}
+
+.delete-button {
+    background-color: #DC3545;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #D65837;
+}
