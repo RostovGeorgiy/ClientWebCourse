@@ -71,7 +71,7 @@
             return Math.max(country.cities.length, citiesAmount);
         }, 0);
 
-        return countriesArray.filter(country => country.cities.length === maxCitiesAmount).map(country => country.name);
+        return countriesArray.filter(country => country.cities.length === maxCitiesAmount);
     }
 
     console.log("Countries with largest amount of cities:");
