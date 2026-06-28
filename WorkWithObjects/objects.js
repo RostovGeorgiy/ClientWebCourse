@@ -1,4 +1,6 @@
-(() => {
+"use strict";
+
+(function() {
     const countries = [
         {
             name: "Russia",
@@ -36,6 +38,10 @@
                     name: "Chicago",
                     population: 2700000
 
+                },
+                {
+                    name: "Houston",
+                    population: 2300000
                 }
             ]
         },
@@ -60,28 +66,26 @@
 
     console.log(countries);
 
-    const getMaxCitiesAmountCountries = array => {
-        const maxCitiesAmount = array.reduce((citiesAccumulator, country) => {
-            return country.cities.length > citiesAccumulator ? country.cities.length : citiesAccumulator;
+    function getMaxCitiesAmountCountries(countriesArray) {
+        const maxCitiesAmount = countriesArray.reduce((citiesAmount, country) => {
+            return Math.max(country.cities.length, citiesAmount);
         }, 0);
 
-        console.log("Countries with largest amount of cities:");
+        return countriesArray.filter(country => country.cities.length === maxCitiesAmount).map(country => country.name);
+    }
 
-        return (array.filter(country => country.cities.length === maxCitiesAmount)).map(country => country.name);
-    };
-
+    console.log("Countries with largest amount of cities:");
     console.log(getMaxCitiesAmountCountries(countries));
 
-    const totalPopulationCountries = array => {
-        console.log("List of countries with total populations:");
-
-        const getCountryObject = array.reduce((countryObject, country) => {
+    function getCountriesPopulations(countriesArray) {
+        const countriesPopulationsObject = countriesArray.reduce((countryObject, country) => {
             countryObject[country.name] = country.cities.reduce((populationSum, city) => populationSum + city.population, 0);
             return countryObject;
         }, {});
 
-        console.log(getCountryObject);
-    };
+        return countriesPopulationsObject;
+    }
 
-    totalPopulationCountries(countries);
+    console.log("Countries with total populations:");
+    console.log(getCountriesPopulations(countries));
 })();
