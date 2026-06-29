@@ -1,34 +1,47 @@
+"use strict";
+
 document.addEventListener("DOMContentLoaded", function () {
     const convertButton = document.querySelector(".convert-button");
-    const inputField = document.querySelector(".temperature-input-field");
+    const inputField = document.querySelector("#temperature-input-field");
+    const temperatureConversionForm = document.querySelector("#temperature-conversion-form");
 
-    convertButton.addEventListener("click", () => {
+    function convertCelsiusToFahrenheit(celsiusTemperature) {
+        return celsiusTemperature * 9 / 5 + 32;
+    }
+
+    function convertCelsiusToKelvin(celsiusTemperature) {
+            return celsiusTemperature + 273.15;
+    }
+
+    temperatureConversionForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+
         const inputValue = inputField.value.trim();
-        const temperatureFahrenheitOutput = document.querySelector('[name = "temperatureFahrenheitOutput"]');
-        const temperatureKelvinOutput = document.querySelector('[name = "temperatureKelvinOutput"]');
+        const fahrenheitTemperatureOutput = document.querySelector("#fahrenheit-temperature-output");
+        const kelvinTemperatureOutput = document.querySelector("#kelvin-temperature-output");
 
-        const errorMessageOutput = document.querySelector('[name = "errorMessageOutput"]');
+        const errorMessageOutput = document.querySelector("#error-message-output");
 
         if (inputValue === "") {
-            errorMessageOutput.style.display = "none";
-            temperatureFahrenheitOutput.style.visibility = "hidden";
-            temperatureKelvinOutput.style.visibility = "hidden";
+            errorMessageOutput.style.display = "block";
+            errorMessageOutput.textContent = "Field must not be empty!";
+            fahrenheitTemperatureOutput.style.visibility = "hidden";
+            kelvinTemperatureOutput.style.visibility = "hidden";
         } else if (!Number.isFinite(Number(inputValue))) {
             errorMessageOutput.style.display = "block";
             errorMessageOutput.textContent = "Input value must be a valid number!";
         } else {
             errorMessageOutput.style.display = "none";
-            const temperatureCelsius = parseFloat(inputField.value);
-            const temperatureFahrenheit = (temperatureCelsius * 9) / 5 + 32;
+            const celsiusTemperature = parseFloat(inputField.value);
+            const fahrenheitTemperature = convertCelsiusToFahrenheit(celsiusTemperature);
 
-            temperatureFahrenheitOutput.style.visibility = "visible";
-            temperatureFahrenheitOutput.textContent = "Fahrenheit temperature: " + temperatureFahrenheit;
+            fahrenheitTemperatureOutput.style.visibility = "visible";
+            fahrenheitTemperatureOutput.textContent = "Fahrenheit temperature: " + fahrenheitTemperature;
 
-            const temperatureKelvin = temperatureCelsius + 273.15;
-            temperatureKelvinOutput.style.visibility = "visible";
-            console.log(temperatureFahrenheit, temperatureKelvin);
+            const kelvinTemperature = convertCelsiusToKelvin(celsiusTemperature);
+            kelvinTemperatureOutput.style.visibility = "visible";
 
-            temperatureKelvinOutput.textContent = "Kelvin temperature: " + temperatureKelvin;
+            kelvinTemperatureOutput.textContent = "Kelvin temperature: " + kelvinTemperature;
         }
-    })
+    });
 });
