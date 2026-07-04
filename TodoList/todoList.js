@@ -1,3 +1,5 @@
+"use strict";
+
 document.addEventListener("DOMContentLoaded", function() {
     const todoForm = document.getElementById("new-todo-form");
     const newTodoItemTextField = document.getElementById("new-todo-item-text-field");
@@ -16,14 +18,20 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         const todoItem = document.createElement("li");
+        todoItem.classList.add("list-item");
+        todoItem.style.listStyleType="none";
 
         function setViewMode () {
             newTodoItemTextField.classList.remove("invalid");
 
             todoItem.innerHTML = `
-                <span class="todo-item-text"></span>
-                <button class="edit-button" type="button">Редактировать</button>
-                <button class="delete-button" type="button">Удалить</button>
+                <div class="todo-item">
+                    <span class="todo-item-text"></span>
+                    <span class="edit-delete-buttons-container">
+                        <button class="button edit-button" type="button">Редактировать</button>
+                        <button class="button delete-button" type="button">Удалить</button>
+                    </span>
+                </div>
             `;
 
             todoItem.querySelector(".todo-item-text").textContent = newTodoItemText;
@@ -35,20 +43,23 @@ document.addEventListener("DOMContentLoaded", function() {
             todoItem.querySelector(".edit-button").addEventListener("click", function () {
                 todoItem.innerHTML = `
                     <form>
-                        <input class="edit-todo-item-text-field" type="text">
-                        <button class="save-button">Сохранить</button>
-                        <button class="cancel-button" type="button">Отменить</button>
+                        <div class="edit-container">
+                            <input class="edit-todo-item-text-field" type="text">
+                            <div class="save-cancel-buttons-container">
+                                <button class="button save-button">Сохранить</button>
+                                <button class="button cancel-button" type="button">Отменить</button>
+                            </div>
+                        </div>
                         <div class="error-message">Нужно заполнить поле</div>
                     </form>
                 `;
 
                 const editTodoItemTextField = todoItem.querySelector(".edit-todo-item-text-field");
 
-                const errorDiv = document.createElement('div');
-                errorDiv.className = 'error-message';
-                errorDiv.textContent = "Необходимо заполнить поле";
-                errorDiv.style.display = "none";
-
+                const errorMessageElement = document.createElement("div");
+                errorMessageElement.className = "error-message";
+                errorMessageElement.textContent = "Необходимо заполнить поле";
+                errorMessageElement.style.display = "none";
 
                 editTodoItemTextField.value = newTodoItemText;
 
