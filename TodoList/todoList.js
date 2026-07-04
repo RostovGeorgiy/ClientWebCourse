@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 <button class="button cancel-button" type="button">Отменить</button>
                             </div>
                         </div>
-                        <div class="error-message">Нужно заполнить поле</div>
+                        <div class="error-message">Необходимо заполнить поле</div>
                     </form>
                 `;
 

@@ -20,7 +20,7 @@ body {
     border: #000 solid 1px;
 }
 
-#todo-list {
+.todo-list {
     list-style-position: inside;
     padding-left: 20px;
 }
@@ -42,13 +42,13 @@ body {
     display: block;
 }
 
-#new-todo-item-text-field {
+.new-todo-item-text-field {
     display: block;
     flex-grow: 1;
     min-width: 0;
 }
 
-.button, #new-todo-item-text-field, .edit-todo-item-text-field {
+.button, .new-todo-item-text-field, .edit-todo-item-text-field {
     padding: 0 5px;
 }
 
