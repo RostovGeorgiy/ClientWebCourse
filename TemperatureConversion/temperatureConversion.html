@@ -12,14 +12,14 @@
     <div class="content">
         <h1>Temperature converter</h1>
         <form id="temperature-conversion-form">
-            <label for="temperature-input-field">
+            <label>
                 Input temperature:
-                <input type="text" id="temperature-input-field" placeholder="Your temperature value">
+                <input type="text" class="temperature-input-field" id="temperature-input-field" placeholder="Your temperature value">
             </label>
             <button class="convert-button">Convert temperature</button>
+            <output id="error-message-output" class="error-output"></output>
             <output id="fahrenheit-temperature-output" class="temperature-output"></output>
             <output id="kelvin-temperature-output" class="temperature-output"></output>
-            <output id="error-message-output" class="error-output"></output>
         </form>
     </div>
 </div>

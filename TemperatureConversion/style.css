@@ -10,8 +10,8 @@
     width: 100%;
 }
 
-#temperature-input-field {
-    margin: 10px;
+.temperature-input-field {
+    margin: 20px 10px;
 }
 
 .convert-button {
@@ -32,4 +32,12 @@
 
 .error-output {
     color: #F00;
+}
+
+.invalid {
+    border: #F00 solid 1px;
+}
+
+.temperature-input-field, .convert-button {
+    padding: 0 5px;
 }
