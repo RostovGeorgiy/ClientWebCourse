@@ -29,17 +29,17 @@
     rex.speak();
 
     class Cat extends Animal {
-            constructor(name) {
-                super(name);
-            }
-
-            speak() {
-                console.log(`${this.name} meows`);
-            }
+        constructor(name) {
+            super(name);
         }
 
-        const tom = new Cat("Tom");
+        speak() {
+            console.log(`${this.name} meows`);
+        }
+    }
 
-        console.log("Cat speak() method:");
-        tom.speak();
+    const tom = new Cat("Tom");
+
+    console.log("Cat speak() method:");
+    tom.speak();
 })();
