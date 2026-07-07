@@ -1,0 +1,137 @@
+body {
+    height: 100%;
+    background-color: #F5F5DC;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.page {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+}
+
+.form-list {
+    padding: 10px;
+    border: #000 solid 1px;
+}
+
+.todo-list {
+    list-style-position: inside;
+    padding-left: 20px;
+}
+
+.list-item {
+    padding: 10px;
+}
+
+.error-message {
+    color: #F00;
+    display: none;
+}
+
+.invalid {
+    border: #F00 solid 1px;
+}
+
+.input-container:has(.invalid) ~ .error-message, .edit-container:has(.invalid) ~ .error-message {
+    display: block;
+}
+
+.new-todo-item-text-field {
+    display: block;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.button, .new-todo-item-text-field, .edit-todo-item-text-field {
+    padding: 0 5px;
+}
+
+.todo-item-text {
+    max-width: 281px;
+}
+
+.button {
+    color: #FFF;
+}
+
+.create-button {
+    display: block;
+    background-color: #00F;
+    color: #FFF;
+    font-size: 15px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+
+}
+
+.create-button:hover {
+    background-color: #378EF0;
+}
+
+.edit-button, .cancel-button {
+    background-color: #6C757D;
+    color: #FFF;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.edit-button:hover, .cancel-button:hover {
+    background-color: #7C8A7D;
+}
+
+.save-button {
+    background-color: #198754;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.save-button:hover {
+    background-color: #19B254;
+}
+
+.delete-button {
+    background-color: #DC3545;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #D65837;
+}
+
+.todo-item, .edit-container {
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.todo-item span {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+
+.todo-item div, .edit-container div {
+    flex-shrink: 0;
+}
+
+.edit-delete-buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
