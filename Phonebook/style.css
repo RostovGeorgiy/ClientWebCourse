@@ -1,0 +1,117 @@
+.page {
+    height: 100%;
+    background-color: #F5F5DC;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.content {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+}
+
+.header {
+    text-align: center;
+}
+
+.table {
+    margin: 20px auto;
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 23px;
+    border-collapse: collapse;
+    border: 1px solid #CFCFCF;
+}
+
+.table th {
+    text-align: left;
+    font-weight: 400;
+    border: 1px solid #CFCFCF;
+    padding: 10px 10px 4px;
+    color: #fff;
+    background-color: #3598DB;
+}
+
+.table td {
+    border: 1px solid #CFCFCF;
+    text-align: center;
+    padding: 8px 10px;
+}
+
+.id {
+    width: 40px;
+}
+
+.second-name {
+    width: 25px;
+}
+
+.first-name {
+    width: 250px;
+}
+
+.phone-number {
+    width: 350px;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #EEE;
+}
+
+.invalid {
+    border: #F00 solid 1px;
+}
+
+.button {
+    color: #FFF;
+    padding: 0 5px;
+}
+
+.create-button {
+    display: block;
+    background-color: #00F;
+    color: #FFF;
+    font-size: 15px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.create-button:hover {
+    background-color: #378EF0;
+}
+
+.edit-button, .cancel-button {
+    background-color: #6C757D;
+    color: #FFF;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.edit-button:hover, .cancel-button:hover {
+    background-color: #7C8A7D;
+}
+
+.save-button {
+    background-color: #198754;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.save-button:hover {
+    background-color: #19B254;
+}
+
+.delete-button {
+    background-color: #DC3545;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #D65837;
+}
+
+.edit-error-message, .error-message {
+    color: red;
+    margin-top: 10px;
+    font-weight: bold;
+}
