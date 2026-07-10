@@ -22,11 +22,10 @@ body {
 
 .todo-list {
     list-style-position: inside;
-    padding-left: 20px;
 }
 
 .list-item {
-    padding: 10px;
+    padding: 10px 0;
 }
 
 .error-message {
@@ -34,11 +33,15 @@ body {
     display: none;
 }
 
-.invalid {
+.input-container.invalid .new-todo-item-text-field {
     border: #F00 solid 1px;
 }
 
-.input-container:has(.invalid) ~ .error-message, .edit-container:has(.invalid) ~ .error-message {
+.edit-container.invalid .edit-todo-item-text-field {
+    border: #F00 solid 1px;
+}
+
+.input-container.invalid + .error-message, .edit-container.invalid + .error-message {
     display: block;
 }
 
@@ -46,6 +49,12 @@ body {
     display: block;
     flex-grow: 1;
     min-width: 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+.edit-todo-item-text-field {
+    width: 400px;
 }
 
 .button, .new-todo-item-text-field, .edit-todo-item-text-field {
@@ -73,7 +82,6 @@ body {
     display: flex;
     gap: 10px;
     width: 100%;
-
 }
 
 .create-button:hover {

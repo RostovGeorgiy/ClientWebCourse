@@ -1,19 +1,20 @@
 "use strict";
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const todoForm = document.getElementById("new-todo-form");
     const newTodoItemTextField = document.getElementById("new-todo-item-text-field");
     const todoList = document.getElementById("todo-list");
+    const inputContainer = document.getElementById("input-container");
 
-    todoForm.addEventListener("submit", function(e) {
+    todoForm.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        newTodoItemTextField.classList.remove("invalid");
+        inputContainer.classList.remove("invalid");
 
         let newTodoItemText = newTodoItemTextField.value.trim();
 
         if (newTodoItemText.length === 0) {
-            newTodoItemTextField.classList.add("invalid");
+            inputContainer.classList.add("invalid");
             return;
         }
 
@@ -21,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function() {
         todoItem.classList.add("list-item");
         todoItem.style.listStyleType="none";
 
-        function setViewMode () {
-            newTodoItemTextField.classList.remove("invalid");
+        function setViewMode() {
+            inputContainer.classList.remove("invalid");
 
             todoItem.innerHTML = `
                 <div class="todo-item">
@@ -72,8 +73,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
                     const editTodoItemText = editTodoItemTextField.value.trim();
 
+                    const editContainer = document.querySelector(".edit-container");
+
                     if (editTodoItemText.length === 0) {
-                        editTodoItemTextField.classList.add("invalid");
+                        editContainer.classList.add("invalid");
                         return;
                     }
 
