@@ -12,9 +12,11 @@
 
 .temperature-input-field {
     margin: 20px 10px;
+    border: #000 solid 1px;
 }
 
 .convert-button {
+    margin: 15px 0;
     display: block;
     background-color: #00F;
     color: #FFF;
