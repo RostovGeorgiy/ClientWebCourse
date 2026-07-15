@@ -10,13 +10,12 @@
     width: 100%;
 }
 
-.temperature-input-field {
+.celsius-temperature-input-field {
     margin: 20px 10px;
     border: #000 solid 1px;
 }
 
 .convert-button {
-    margin: 15px 0;
     display: block;
     background-color: #00F;
     color: #FFF;
@@ -34,12 +33,13 @@
 
 .error-output {
     color: #F00;
+    margin: 15px 0;
 }
 
 .invalid {
     border: #F00 solid 1px;
 }
 
-.temperature-input-field, .convert-button {
+.celsius-temperature-input-field, .convert-button {
     padding: 0 5px;
 }

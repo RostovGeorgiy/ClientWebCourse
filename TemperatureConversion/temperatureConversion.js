@@ -1,7 +1,7 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
-    const inputField = document.querySelector("#temperature-input-field");
+    const celsiusTemperatureStringInputField = document.querySelector("#celsius-temperature-input-field");
     const temperatureConversionForm = document.querySelector("#temperature-conversion-form");
 
     function convertCelsiusToFahrenheit(celsiusTemperature) {
@@ -15,37 +15,25 @@ document.addEventListener("DOMContentLoaded", function () {
     temperatureConversionForm.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        inputField.classList.remove("invalid");
-
-        const inputValue = inputField.value.trim();
+        celsiusTemperatureStringInputField.classList.remove("invalid");
+        const celsiusTemperatureString = celsiusTemperatureStringInputField.value.trim();
+        const celsiusTemperature = Number(celsiusTemperatureString);
 
         const fahrenheitTemperatureOutput = document.querySelector("#fahrenheit-temperature-output");
         const kelvinTemperatureOutput = document.querySelector("#kelvin-temperature-output");
 
         const errorMessageOutput = document.querySelector("#error-message-output");
 
-        const inputNumberValue = Number(inputValue);
-
-        if (inputValue === "") {
+        if (celsiusTemperatureString === "" || Number.isNaN(celsiusTemperature)) {
             errorMessageOutput.style.display = "block";
-            errorMessageOutput.textContent = "Field must not be empty!";
+            errorMessageOutput.textContent = "A valid numeric value must be entered!";
 
-            inputField.classList.add("invalid");
-
-            fahrenheitTemperatureOutput.style.visibility = "hidden";
-            kelvinTemperatureOutput.style.visibility = "hidden";
-        } else if (Number.isNaN(inputNumberValue)) {
-            errorMessageOutput.style.display = "block";
-            errorMessageOutput.textContent = "Input value must be a valid number!";
-
-            inputField.classList.add("invalid");
+            celsiusTemperatureStringInputField.classList.add("invalid");
 
             fahrenheitTemperatureOutput.style.visibility = "hidden";
             kelvinTemperatureOutput.style.visibility = "hidden";
         } else {
             errorMessageOutput.style.display = "none";
-
-            const celsiusTemperature = inputNumberValue;
 
             fahrenheitTemperatureOutput.style.visibility = "visible";
             fahrenheitTemperatureOutput.textContent = "Fahrenheit temperature: " + convertCelsiusToFahrenheit(celsiusTemperature);
