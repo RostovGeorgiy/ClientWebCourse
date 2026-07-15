@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const todoItem = document.createElement("li");
         todoItem.classList.add("list-item");
-        todoItem.style.listStyleType="none";
 
         function setViewMode() {
             inputContainer.classList.remove("invalid");
@@ -73,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     const editTodoItemText = editTodoItemTextField.value.trim();
 
-                    const editContainer = document.querySelector(".edit-container");
+                    const editContainer = e.target.querySelector(".edit-container");
 
                     if (editTodoItemText.length === 0) {
                         editContainer.classList.add("invalid");
