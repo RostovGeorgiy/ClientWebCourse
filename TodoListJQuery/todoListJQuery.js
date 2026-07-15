@@ -17,9 +17,8 @@ $(function() {
             return;
         }
 
-        const todoItem = $("<li>");
-        todoItem.addClass("list-item");
-        $(todoItem).css("listStyleType","none");
+        const todoItem = $("<li>")
+            .addClass("list-item");
 
         function setViewMode () {
             newTodoItemTextField.removeClass("invalid");
@@ -56,10 +55,10 @@ $(function() {
 
                 const editTodoItemTextField = todoItem.find(".edit-todo-item-text-field");
 
-                const errorMessageElement = $("<div>");
-                errorMessageElement.addClass("error-message");
-                errorMessageElement.text("Необходимо заполнить поле");
-                $(errorMessageElement).css("display", "none");
+                const errorMessageElement = $("<div>")
+                    .addClass("error-message")
+                    .text("Необходимо заполнить поле")
+                    .hide();
 
                 editTodoItemTextField.val(newTodoItemText);
 

@@ -22,11 +22,11 @@ body {
 
 .todo-list {
     list-style-position: inside;
-    padding-left: 20px;
 }
 
 .list-item {
-    padding: 10px;
+    padding: 10px 0;
+    list-style-type: none;
 }
 
 .error-message {
@@ -46,6 +46,10 @@ body {
     display: block;
     flex-grow: 1;
     min-width: 0;
+}
+
+.edit-todo-item-text-field {
+    width: 100%;
 }
 
 .button, .new-todo-item-text-field, .edit-todo-item-text-field {
@@ -73,7 +77,6 @@ body {
     display: flex;
     gap: 10px;
     width: 100%;
-
 }
 
 .create-button:hover {
