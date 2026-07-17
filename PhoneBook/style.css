@@ -6,6 +6,7 @@
 
 .content {
     margin: 0 auto;
+    padding: 0 10px;
     max-width: 600px;
     width: 100%;
 }
@@ -27,7 +28,7 @@
     font-weight: 400;
     border: 1px solid #CFCFCF;
     padding: 10px 10px 4px;
-    color: #fff;
+    color: #FFF;
     background-color: #3598DB;
 }
 
@@ -86,7 +87,12 @@
     cursor: pointer;
 }
 
-.edit-button:hover, .cancel-button:hover {
+.input-field {
+    padding: 0 5px;
+    border: #000 solid 1px;
+}
+
+.edit-button:not(:disabled):hover, .cancel-button:hover {
     background-color: #7C8A7D;
 }
 
@@ -106,12 +112,24 @@
     cursor: pointer;
 }
 
-.delete-button:hover {
+.delete-button:not(:disabled):hover {
     background-color: #D65837;
 }
 
 .edit-error-message, .error-message {
-    color: red;
+    color: #F00;
     margin-top: 10px;
     font-weight: bold;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.hidden-button {
+    display: none;
+}
+
+.form-blocked: {
+    opacity: 0.5;
 }
