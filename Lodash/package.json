@@ -1,4 +1,12 @@
 {
+  "name": "lodash",
+  "version": "1.0.0",
+  "description": "Json package",
+  "type": "commonjs",
+  "main": "lodash.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "lodash": "^4.18.1"
   }
