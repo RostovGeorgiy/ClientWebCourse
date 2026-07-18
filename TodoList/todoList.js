@@ -56,11 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 const editTodoItemTextField = todoItem.querySelector(".edit-todo-item-text-field");
 
-                const errorMessageElement = document.createElement("div");
-                errorMessageElement.className = "error-message";
-                errorMessageElement.textContent = "Необходимо заполнить поле";
-                errorMessageElement.style.display = "none";
-
                 editTodoItemTextField.value = newTodoItemText;
 
                 todoItem.querySelector(".cancel-button").addEventListener("click", function () {
