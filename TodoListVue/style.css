@@ -1,0 +1,13 @@
+.header {
+    text-align: center;
+}
+
+.form-list {
+    padding: 10px;
+    border: #000 solid 1px;
+}
+
+.todo-list {
+    list-style-type: none;
+    padding-left: 0;
+}

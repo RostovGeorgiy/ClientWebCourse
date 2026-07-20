@@ -1,0 +1,15 @@
+{
+  "name": "todolistvue",
+  "version": "1.0.0",
+  "description": "TodoList program with Vue",
+  "type": "commonjs",
+  "main": "jquery-4.0.0.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "jquery": "^4.0.0",
+    "vue": "^3.5.40"
+  }
+}
