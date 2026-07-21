@@ -65,18 +65,18 @@
         return _.chain(persons)
             .filter(p => p.age >= 20 && p.age <= 30)
             .uniqBy("name")
-            .orderBy("name", "desc")
             .map(p => p.name)
+            .orderBy("desc")
             .value();
     }
 
     console.log("Names of persons aged between 20 and 30 sorted in descending order:");
     console.log(getUniquePersonsNamesBetween20and30Descending(persons));
 
-    function getPersonsAmountByNames(persons) {
+    function getPersonsAmountsByNames(persons) {
         return _.countBy(persons, "name");
     }
 
     console.log("Amount of times a name is found in array:");
-    console.log(getPersonsAmountByNames(persons));
+    console.log(getPersonsAmountsByNames(persons));
 })();
